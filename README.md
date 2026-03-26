@@ -1,7 +1,7 @@
 # Portfolio
 Personal portfolio website for **Jai Srinivasan Sivaraj** — Computer Engineering student at the University of Waterloo.
 
-🌐 **Live site:** [jai-12-cpu.github.io](https://jai-12-cpu.github.io)
+🌐 **Live site:** [jai-12-cpu.github.io](https://jai-12-cpu.github.io/portfolio/)
 
 ---
 
