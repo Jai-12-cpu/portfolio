@@ -93,6 +93,26 @@ section{padding:6rem 3rem;position:relative}
 .skill-cell-title{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-size:10px;padding:.28rem .65rem;border:1px solid var(--border2);border-radius:2px;color:var(--muted2);transition:all .2s;letter-spacing:.04em}
+  /* Existing tag style in your file */
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--muted2);
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ADD THIS NEW BLOCK HERE */
+.tag-teal {
+  background: var(--teal-dim);
+  color: var(--teal);
+  border: 1px solid rgba(126, 184, 164, 0.2);
+}
 .tag:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-dim)}
 
 /* ── Projects ── */
@@ -271,6 +291,23 @@ footer a:hover{color:var(--accent)}
   <div class="s-label reveal">Projects</div>
   <div class="s-title reveal">Things I've built.</div>
   <div class="projects-grid">
+    <div class="project-card reveal">
+  <div class="project-tags">
+    <span class="tag tag-teal">Full-Stack</span>
+    <span class="tag">FastAPI</span>
+    <span class="tag">PostgreSQL</span>
+  </div>
+  <h3 class="project-title">ApexFit Pro</h3>
+  <p class="project-desc">
+    A high-performance fitness architecture tracking training volume and PR progression. Features a secure HMAC-SHA256 authentication system and a real-time leaderboard driven by complex SQL aggregations.
+  </p>
+  <div class="project-links">
+    <a href="https://lnkd.in/g-EzZUFh" target="_blank" class="project-link">
+      Live Demo <span style="font-family:serif; margin-left:4px">↗</span>
+    </a>
+    <a href="https://github.com/jai-12-cpu" target="_blank" class="project-link">GitHub</a>
+  </div>
+</div>
 
     <div class="proj-card featured reveal">
       <div>
