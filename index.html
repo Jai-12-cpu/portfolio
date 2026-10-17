@@ -67,6 +67,11 @@ nav.scrolled{background:rgba(8,8,8,.9);border-bottom:1px solid var(--border);bac
 .hero-scroll-hint::after{content:'';display:block;width:1px;height:56px;background:linear-gradient(to bottom,var(--muted),transparent);animation:scrollLine 2s 1.5s infinite}
 @keyframes scrollLine{0%,100%{opacity:.4}50%{opacity:1}}
 
+.hero-now{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.6rem;padding:.45rem .95rem;border:1px solid rgba(232,213,163,.25);background:var(--accent-dim);border-radius:2px;font-size:11px;letter-spacing:.05em;color:var(--muted2);text-decoration:none;opacity:0;animation:up .8s .55s forwards;transition:border-color .2s}
+.hero-now:hover{border-color:var(--accent)}
+.hero-now b{color:var(--accent);font-weight:500}
+.hero-now::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);animation:scrollLine 2s infinite}
+.hero-now-wrap{display:block}
 /* ── Sections ── */
 section{padding:6rem 3rem;position:relative}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 3rem}
@@ -121,6 +126,11 @@ section{padding:6rem 3rem;position:relative}
 .exp-table{width:100%;border-collapse:collapse}
 .exp-row{display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--border);transition:background .2s}
 .exp-row:hover{background:rgba(255,255,255,.012)}
+.exp-row.featured{background:linear-gradient(90deg,var(--accent-dim),transparent 70%);border-left:2px solid var(--accent)}
+.exp-row.featured .exp-left{padding-left:1.2rem}
+.exp-row.featured .exp-co{color:var(--accent)}
+.exp-row.featured .exp-pts li strong{color:var(--text);font-weight:500}
+.exp-badge{display:inline-block;margin-top:.7rem;font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .5rem;border:1px solid rgba(126,184,164,.3);background:var(--teal-dim);color:var(--teal);border-radius:2px}
 .exp-left{padding:2.2rem 0;padding-right:2rem;border-right:1px solid var(--border)}
 .exp-yr{font-size:10px;color:var(--teal);letter-spacing:.1em;margin-bottom:.3rem}
 .exp-co{font-size:11px;color:var(--muted);letter-spacing:.06em}
@@ -219,6 +229,7 @@ footer a:hover{color:var(--accent)}
       AI agents, IoT wristbands, full-stack apps, programmable robots.
       <em style="color:var(--teal);font-style:normal"> Always shipping.</em>
     </p>
+    <a href="#experience" class="hero-now">Junior Software Engineer @ <b>Tesserae Studios</b> · Summer 2026</a>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-fill">View Projects →</a>
       <a href="https://github.com/jai-12-cpu" target="_blank" class="btn btn-ghost">GitHub ↗</a>
@@ -236,7 +247,7 @@ footer a:hover{color:var(--accent)}
   <div class="about-grid">
     <div class="about-body reveal">
       <p>I'm <strong>Jai</strong>, a Computer Engineering student at <em>UWaterloo</em>, graduating 2030. I love the full stack — not just web, but <strong>the entire system</strong>: sensors, microcontrollers, logic, interfaces, databases.</p>
-      <p>My work spans <strong>IoT medical devices</strong>, <strong>LLM-based AI agents</strong>, <strong>full-stack web apps</strong>, and <strong>GUI robots</strong>. I've interned as a software engineer, competed at hackathons and coding contests, and shipped under real constraints.</p>
+      <p>My work spans <strong>IoT medical devices</strong>, <strong>LLM-based AI agents</strong>, <strong>full-stack web apps</strong>, and <strong>GUI robots</strong>. I interned as a software engineer at <em>Tesserae Studios</em>, competed at hackathons and coding contests, and shipped under real constraints.</p>
       <p>I don't just write code. I prototype, iterate, debug hardware, and make things that <em>actually work</em> in the real world.</p>
     </div>
     <div class="stats-grid reveal reveal-d2">
@@ -356,14 +367,14 @@ footer a:hover{color:var(--accent)}
   <div class="s-label reveal">Experience</div>
   <div class="s-title reveal">What I've shipped.</div>
   <div class="exp-table reveal">
-    <div class="exp-row">
-      <div class="exp-left"><div class="exp-yr">Jun – Aug 2026</div><div class="exp-co">Tesserae Studios</div></div>
+    <div class="exp-row featured">
+      <div class="exp-left"><div class="exp-yr">Jun – Aug 2026</div><div class="exp-co">Tesserae Studios</div><span class="exp-badge">Latest</span></div>
       <div class="exp-right">
         <div class="exp-role">Junior Software Engineer</div>
         <ul class="exp-pts">
-          <li>Built full-stack components for LLM-based AI agents: prompt engineering, tool calling, and multi-step workflows for automated 3D room rendering and estimation.</li>
-          <li>Fixed production bugs across two live client platforms (Modiva Studios and Clawd Video), tracing root causes in backend services and shipping tested fixes.</li>
-          <li>Joined weekly code reviews with executive leadership and contacted 100+ target client contractors for user outreach.</li>
+          <li>Built full-stack components for <strong>LLM-based AI agents</strong>: prompt engineering, tool calling, and multi-step workflows for automated 3D room rendering and estimation.</li>
+          <li>Fixed production bugs across <strong>two live client platforms</strong> (Modiva Studios and Clawd Video), tracing root causes in backend services and shipping tested fixes.</li>
+          <li>Joined weekly code reviews with executive leadership and contacted <strong>100+ target client contractors</strong> for user outreach.</li>
         </ul>
       </div>
     </div>
