@@ -92,27 +92,7 @@ section{padding:6rem 3rem;position:relative}
 .skill-cell:hover{background:var(--surface2)}
 .skill-cell-title{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:10px;padding:.28rem .65rem;border:1px solid var(--border2);border-radius:2px;color:var(--muted2);transition:all .2s;letter-spacing:.04em}
-  /* Existing tag style in your file */
-.tag {
-  display: inline-block;
-  padding: 4px 10px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  color: var(--muted2);
-  border-radius: 4px;
-  font-family: var(--mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* ADD THIS NEW BLOCK HERE */
-.tag-teal {
-  background: var(--teal-dim);
-  color: var(--teal);
-  border: 1px solid rgba(126, 184, 164, 0.2);
-}
+.tag{font-size:10px;padding:.28rem .65rem;border:1px solid var(--border2);border-radius:2px;color:var(--muted2);transition:all .2s;letter-spacing:.04em;text-transform:uppercase}
 .tag:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-dim)}
 
 /* ── Projects ── */
@@ -128,7 +108,6 @@ section{padding:6rem 3rem;position:relative}
 .proj-links{display:flex;gap:.6rem}
 .proj-link{font-size:10px;padding:.25rem .6rem;border:1px solid var(--border2);border-radius:2px;color:var(--muted);text-decoration:none;transition:all .2s;letter-spacing:.06em}
 .proj-link:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
-.proj-link.github{display:flex;align-items:center;gap:4px}
 .proj-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;letter-spacing:-.5px;color:var(--text);margin-bottom:.6rem}
 .proj-year{font-size:10px;color:var(--teal);letter-spacing:.1em;margin-bottom:1rem}
 .proj-desc{font-size:12px;color:var(--muted2);line-height:1.9;flex:1}
@@ -163,7 +142,6 @@ section{padding:6rem 3rem;position:relative}
 .ach-d{font-size:11px;color:var(--muted);line-height:1.8}
 
 /* ── Contact ── */
-#contact{}
 .contact-split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .contact-body{color:var(--muted2);font-size:13px;line-height:2}
 .contact-body strong{color:var(--text);font-weight:500}
@@ -203,6 +181,8 @@ footer a:hover{color:var(--accent)}
   .exp-right{padding:1rem 0}
   .hero-scroll-hint{display:none}
 }
+@media(pointer:coarse){body,.btn{cursor:auto}#cur,#cur-ring{display:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -236,7 +216,7 @@ footer a:hover{color:var(--accent)}
     </h1>
     <p class="hero-tagline">
       I build at the edge of <strong>hardware and software</strong> —
-      IoT wristbands, Python games, programmable robots.
+      AI agents, IoT wristbands, full-stack apps, programmable robots.
       <em style="color:var(--teal);font-style:normal"> Always shipping.</em>
     </p>
     <div class="hero-actions">
@@ -256,11 +236,11 @@ footer a:hover{color:var(--accent)}
   <div class="about-grid">
     <div class="about-body reveal">
       <p>I'm <strong>Jai</strong>, a Computer Engineering student at <em>UWaterloo</em>, graduating 2030. I love the full stack — not just web, but <strong>the entire system</strong>: sensors, microcontrollers, logic, interfaces, databases.</p>
-      <p>My work spans <strong>IoT medical devices</strong>, <strong>Python mini-games</strong>, <strong>Java algorithm suites</strong>, and <strong>GUI robots</strong>. I've competed at hackathons, inter-school coding events, and shipped under real constraints.</p>
+      <p>My work spans <strong>IoT medical devices</strong>, <strong>LLM-based AI agents</strong>, <strong>full-stack web apps</strong>, and <strong>GUI robots</strong>. I've interned as a software engineer, competed at hackathons and coding contests, and shipped under real constraints.</p>
       <p>I don't just write code. I prototype, iterate, debug hardware, and make things that <em>actually work</em> in the real world.</p>
     </div>
     <div class="stats-grid reveal reveal-d2">
-      <div class="stat-cell"><div class="stat-n">3+</div><div class="stat-l">Programming languages</div></div>
+      <div class="stat-cell"><div class="stat-n">8+</div><div class="stat-l">Programming languages</div></div>
       <div class="stat-cell"><div class="stat-n">20+</div><div class="stat-l">Algorithms implemented</div></div>
       <div class="stat-cell"><div class="stat-n">3</div><div class="stat-l">Hackathons competed</div></div>
       <div class="stat-cell"><div class="stat-n">2030</div><div class="stat-l">Expected graduation</div></div>
@@ -275,12 +255,12 @@ footer a:hover{color:var(--accent)}
   <div class="s-label reveal">Technical skills</div>
   <div class="s-title reveal">What I work with.</div>
   <div class="skills-wrap reveal reveal-d1">
-    <div class="skill-cell"><div class="skill-cell-title">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div></div>
-    <div class="skill-cell"><div class="skill-cell-title">Data & Databases</div><div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">CRUD</span><span class="tag">DDL/DML</span><span class="tag">File I/O</span><span class="tag">CSV</span></div></div>
-    <div class="skill-cell"><div class="skill-cell-title">Tools</div><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Arduino IDE</span></div></div>
-    <div class="skill-cell"><div class="skill-cell-title">Hardware</div><div class="tags"><span class="tag">Arduino</span><span class="tag">ATmega328P</span><span class="tag">Heart-rate sensor</span><span class="tag">Accelerometer</span><span class="tag">LCD Display</span></div></div>
-    <div class="skill-cell"><div class="skill-cell-title">Core Concepts</div><div class="tags"><span class="tag">OOP</span><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Debugging</span><span class="tag">Error Handling</span><span class="tag">Logging</span></div></div>
-    <div class="skill-cell"><div class="skill-cell-title">Academic</div><div class="tags"><span class="tag">Linear Algebra</span><span class="tag">Calculus</span><span class="tag">Discrete Math</span><span class="tag">Digital Logic</span><span class="tag">Computer Systems</span></div></div>
+    <div class="skill-cell"><div class="skill-cell-title">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span><span class="tag">MATLAB</span><span class="tag">Verilog</span></div></div>
+    <div class="skill-cell"><div class="skill-cell-title">Data &amp; Databases</div><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">CRUD</span><span class="tag">File I/O</span><span class="tag">CSV</span></div></div>
+    <div class="skill-cell"><div class="skill-cell-title">Tools &amp; Frameworks</div><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Chart.js</span><span class="tag">LTspice</span><span class="tag">Quartus</span><span class="tag">Railway</span><span class="tag">Vercel</span></div></div>
+    <div class="skill-cell"><div class="skill-cell-title">Hardware</div><div class="tags"><span class="tag">Arduino</span><span class="tag">ATmega328P</span><span class="tag">RISC-V</span><span class="tag">Heart-rate sensor</span><span class="tag">Accelerometer</span><span class="tag">LCD Display</span></div></div>
+    <div class="skill-cell"><div class="skill-cell-title">Core Concepts</div><div class="tags"><span class="tag">OOP</span><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">REST APIs</span><span class="tag">AI Agents</span><span class="tag">Dynamic Memory</span><span class="tag">Debugging</span><span class="tag">Error Handling</span></div></div>
+    <div class="skill-cell"><div class="skill-cell-title">Academic</div><div class="tags"><span class="tag">Linear Algebra</span><span class="tag">Calculus</span><span class="tag">Discrete Math</span><span class="tag">Digital Logic</span><span class="tag">Linear Circuits</span><span class="tag">Microprocessors</span><span class="tag">Computer Systems</span></div></div>
   </div>
 </section>
 
@@ -291,119 +271,79 @@ footer a:hover{color:var(--accent)}
   <div class="s-label reveal">Projects</div>
   <div class="s-title reveal">Things I've built.</div>
   <div class="projects-grid">
-    <div class="project-card reveal">
-  <div class="project-tags">
-    <span class="tag tag-teal">Full-Stack</span>
-    <span class="tag">FastAPI</span>
-    <span class="tag">PostgreSQL</span>
-  </div>
-  <h3 class="project-title">ApexFit Pro</h3>
-  <p class="project-desc">
-    A high-performance fitness architecture tracking training volume and PR progression. Features a secure HMAC-SHA256 authentication system and a real-time leaderboard driven by complex SQL aggregations.
-  </p>
-  <div class="project-links">
-    <a href="https://lnkd.in/g-EzZUFh" target="_blank" class="project-link">
-      Live Demo <span style="font-family:serif; margin-left:4px">↗</span>
-    </a>
-    <a href="https://github.com/jai-12-cpu" target="_blank" class="project-link">GitHub</a>
-  </div>
-</div>
 
     <div class="proj-card featured reveal">
       <div>
         <div class="proj-header">
           <span class="proj-num">01 / Featured</span>
           <div class="proj-links">
-            <a href="https://github.com/Jai-12-cpu/Cyberventure" target="_blank" class="proj-link github">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.57 0-.28-.01-1.03-.02-2.03-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.21.69.82.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
+            <a href="https://lnkd.in/g-EzZUFh" target="_blank" class="proj-link">Live demo ↗</a>
+            <a href="https://github.com/jai-12-cpu" target="_blank" class="proj-link">GitHub ↗</a>
           </div>
         </div>
-        <div class="proj-title">CyberVenture</div>
-        <div class="proj-year">2024 · Python Game</div>
-        <p class="proj-desc">A fully playable Python game with four distinct interactive mini-games, each with its own mechanics and progressive difficulty levels. Built from scratch with custom scoring, user-driven gameplay loops, and clean modular architecture.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">Python</span>
-          <span class="proj-tag">Game Dev</span>
-          <span class="proj-tag">OOP</span>
-          <span class="proj-tag">File I/O</span>
-        </div>
+        <div class="proj-title">ApexFit</div>
+        <div class="proj-year">2026 · Full-Stack</div>
+        <p class="proj-desc">A full-stack fitness tracker that logs training volume and personal records, with a real-time leaderboard driven by SQL aggregations.</p>
+        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">FastAPI</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Chart.js</span></div>
       </div>
       <div>
         <ul class="proj-highlights">
-          <li>4 interactive mini-games with unique mechanics per level</li>
-          <li>Progressive difficulty scaling across gameplay sessions</li>
-          <li>Custom scoring system with user-driven control flow</li>
-          <li>Implements logging, error handling, and input validation throughout</li>
-          <li>Clean modular codebase — each game component independently maintainable</li>
+          <li>FastAPI REST backend with a PostgreSQL database</li>
+          <li>Indexed joins and optimized aggregation cut leaderboard query latency by 40%</li>
+          <li>Chart.js dashboard for personal records and progress trends</li>
+          <li>Secure HMAC-SHA256 token authentication</li>
+          <li>Deployed with Railway and Vercel</li>
         </ul>
-        <div style="margin-top:1.5rem;padding:1rem 1.2rem;border:1px solid var(--border);border-radius:3px;background:var(--bg)">
-          <div style="font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem">Game Link</div>
-          <a href="https://jai-12-cpu.github.io/Cyberventure/" target="_blank" style="font-size:12px;color:var(--teal);text-decoration:none;word-break:break-all">github.com/jai-12-cpu/CyberVenture ↗</a>
-        </div>
       </div>
     </div>
 
     <div class="proj-card reveal reveal-d1">
-      <div class="proj-header"><span class="proj-num">02</span></div>
-      <div class="proj-title">VitalLink</div>
-      <div class="proj-year">2025 · IoT / Hardware</div>
-      <p class="proj-desc">Smart patient wristband to improve nurse communication and reduce hospital-induced delirium. Integrates real-time biometric monitoring, nurse alert system, and two-way messaging into a single embedded device.</p>
-      <ul class="proj-highlights" style="margin-top:.8rem">
-        <li>ATmega328P + heart-rate sensor + accelerometer + potentiometer</li>
-        <li>Live biometric data on 16×2 LCD & web dashboard</li>
-        <li>Audio nurse alerts + instant notifications + 2-way messaging</li>
-        <li>Abnormal motion detection with false-positive filtering</li>
-      </ul>
-      <div class="proj-tags">
-        <span class="proj-tag">Arduino</span><span class="proj-tag">ATmega328P</span><span class="proj-tag">JS</span><span class="proj-tag">HTML5</span><span class="proj-tag">IoT</span>
+      <div class="proj-header"><span class="proj-num">02</span>
+        <div class="proj-links"><!-- TODO: add the WonderQuest live demo URL --><a href="https://github.com/jai-12-cpu" target="_blank" class="proj-link">GitHub ↗</a></div>
       </div>
+      <div class="proj-title">WonderQuest</div>
+      <div class="proj-year">2026 · C++ Game Engine</div>
+      <p class="proj-desc">An object-oriented text adventure engine in C++ with custom memory management and encapsulated player and environment entities.</p>
+      <ul class="proj-highlights" style="margin-top:.8rem">
+        <li>Dynamic inventory state tracking</li>
+        <li>Custom file parser loads the world across 8 interactive locations</li>
+        <li>Custom scoring parser</li>
+      </ul>
+      <div class="proj-tags"><span class="proj-tag">C++</span><span class="proj-tag">OOP</span><span class="proj-tag">File I/O</span></div>
     </div>
 
     <div class="proj-card reveal reveal-d2">
       <div class="proj-header"><span class="proj-num">03</span></div>
-      <div class="proj-title">Spark Robot</div>
-      <div class="proj-year">2025 · Hackathon · Quality of Life</div>
-      <p class="proj-desc">A programmable robot with a custom GUI delivering exercise reminders and motivational feedback. Focused on usability, engagement, and accessibility — built to actually help people move more.</p>
+      <div class="proj-title">VitalLink</div>
+      <div class="proj-year">2025 · IoT / Hardware · Team of 4</div>
+      <p class="proj-desc">A wearable wristband to reduce hospital delirium. It combines an ATmega328P, pulse sensor, and accelerometer with threshold-based nurse alerts.</p>
       <ul class="proj-highlights" style="margin-top:.8rem">
-        <li>Custom-built GUI for programming reminder schedules</li>
-        <li>Motivational feedback system with personalized responses</li>
-        <li>Emphasis on accessible, intuitive UX design</li>
+        <li>Real-time motion filtering in C/C++ cuts false-positive alerts</li>
+        <li>Live biometric data on a 16×2 LCD and a web dashboard</li>
+        <li>Interactive monitoring GUI for medical staff</li>
       </ul>
-      <div class="proj-tags">
-        <span class="proj-tag">Robotics</span><span class="proj-tag">GUI</span><span class="proj-tag">Python</span><span class="proj-tag">Hardware</span>
-      </div>
+      <div class="proj-tags"><span class="proj-tag">C/C++</span><span class="proj-tag">ATmega328P</span><span class="proj-tag">JS</span><span class="proj-tag">HTML5</span><span class="proj-tag">IoT</span></div>
     </div>
 
     <div class="proj-card reveal reveal-d1">
-      <div class="proj-header">
-        <span class="proj-num">04</span>
+      <div class="proj-header"><span class="proj-num">04</span>
         <div class="proj-links">
-          <a href="https://github.com/jai-12-cpu" target="_blank" class="proj-link">Profile ↗</a>
+          <a href="https://jai-12-cpu.github.io/Cyberventure/" target="_blank" class="proj-link">Play ↗</a>
+          <a href="https://github.com/Jai-12-cpu/Cyberventure" target="_blank" class="proj-link">GitHub ↗</a>
         </div>
       </div>
-      <div class="proj-title">Java Algorithms Suite</div>
-      <div class="proj-year">2023 · DSA</div>
-      <p class="proj-desc">20+ Java programs covering sorting, searching, and pattern algorithms. Deep focus on time complexity analysis, code tracing, and debugging — building strong fundamentals from the ground up.</p>
-      <div class="proj-tags">
-        <span class="proj-tag">Java</span><span class="proj-tag">Algorithms</span><span class="proj-tag">Sorting</span><span class="proj-tag">Searching</span><span class="proj-tag">OOP</span>
-      </div>
+      <div class="proj-title">CyberVenture</div>
+      <div class="proj-year">2024 · Python Game</div>
+      <p class="proj-desc">A Python desktop app with 4 interactive logic mini-games, runtime input validation, and MySQL-backed player profiles and leaderboards.</p>
+      <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">MySQL</span><span class="proj-tag">OOP</span></div>
     </div>
 
     <div class="proj-card reveal reveal-d2">
       <div class="proj-header"><span class="proj-num">05</span></div>
-      <div class="proj-title">Gravity Zipline Delivery</div>
-      <div class="proj-year">2024 · Eng Hacks Hackathon</div>
-      <p class="proj-desc">A gravity-powered zipline system for medical supply delivery in remote terrain. Engineered a tensioned-rope mechanism with foil-padded cargo capsule — fully mechanical, under budget, zero power required.</p>
-      <ul class="proj-highlights" style="margin-top:.8rem">
-        <li>Resolved structural failures under resource constraints</li>
-        <li>Designed for fragile supply transport across remote terrain</li>
-        <li>Fully mechanical — no electronics, no power source</li>
-      </ul>
-      <div class="proj-tags">
-        <span class="proj-tag">Hardware</span><span class="proj-tag">Mechanical</span><span class="proj-tag">Prototyping</span><span class="proj-tag">Eng Hacks</span>
-      </div>
+      <div class="proj-title">Spark Robot</div>
+      <div class="proj-year">2025 · Hackathon · Quality of Life</div>
+      <p class="proj-desc">An assistive robotic device with sensor-driven actuation and a custom HMI for automated health-maintenance tasks, such as exercise reminders and motivational feedback.</p>
+      <div class="proj-tags"><span class="proj-tag">Robotics</span><span class="proj-tag">HMI</span><span class="proj-tag">Sensors</span><span class="proj-tag">Hardware</span></div>
     </div>
 
   </div>
@@ -416,6 +356,17 @@ footer a:hover{color:var(--accent)}
   <div class="s-label reveal">Experience</div>
   <div class="s-title reveal">What I've shipped.</div>
   <div class="exp-table reveal">
+    <div class="exp-row">
+      <div class="exp-left"><div class="exp-yr">Jun – Aug 2026</div><div class="exp-co">Tesserae Studios</div></div>
+      <div class="exp-right">
+        <div class="exp-role">Junior Software Engineer</div>
+        <ul class="exp-pts">
+          <li>Built full-stack components for LLM-based AI agents: prompt engineering, tool calling, and multi-step workflows for automated 3D room rendering and estimation.</li>
+          <li>Fixed production bugs across two live client platforms (Modiva Studios and Clawd Video), tracing root causes in backend services and shipping tested fixes.</li>
+          <li>Joined weekly code reviews with executive leadership and contacted 100+ target client contractors for user outreach.</li>
+        </ul>
+      </div>
+    </div>
     <div class="exp-row">
       <div class="exp-left"><div class="exp-yr">2025</div><div class="exp-co">VitalLink</div></div>
       <div class="exp-right">
@@ -516,7 +467,7 @@ footer a:hover{color:var(--accent)}
 </section>
 
 <footer>
-  <span>© 2025 Jai Srinivasan Sivaraj · Waterloo, ON</span>
+  <span>© 2026 Jai Srinivasan Sivaraj · Waterloo, ON</span>
   <span><a href="https://github.com/jai-12-cpu" target="_blank">github.com/jai-12-cpu</a></span>
 </footer>
 
